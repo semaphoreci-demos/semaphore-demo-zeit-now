@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`:index [GET /] Should get server is running response 1`] = `
+Object {
+  "text": "Hello from express server.",
+}
+`;

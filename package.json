@@ -1,0 +1,35 @@
+{
+  "name": "express-ziet-now-semaphore-ci",
+  "version": "1.0.0",
+  "description": "Express Started Template",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=local nodemon index.js",
+    "test": "NODE_ENV=test PORT=3000 jest --coverage --bail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stajics/express-ziet-now-semaphore-ci.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stajics/express-ziet-now-semaphore-ci/issues"
+  },
+  "homepage": "https://github.com/stajics/express-ziet-now-semaphore-ci#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "helmet": "^3.16.0"
+  },
+  "devDependencies": {
+    "jest": "^24.7.1",
+    "nodemon": "^1.18.10",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "controllers/index.controller.js"
+    ]
+  }
+}
