@@ -1,7 +1,7 @@
 # Semaphore demo CI/CD pipeline using JavaScript (Node.js, TypeScript, Nest.js, React)
 
 Example application and CI/CD pipeline showing how to run a JavaScript Express.js project
-on Semaphore 2.0. Project consists of a Express.js server. Code is written in JavaScript!
+on Semaphore 2.0. Project consists of a Express.js server. Code is written in JavaScript.
 
 ## CI/CD on Semaphore
 
