@@ -1,0 +1,26 @@
+# This pipeline runs after semaphore.yml
+version: v1.0
+name: Deploy to production
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+blocks:
+  - name: Deploy to production 
+    task:
+      secrets:
+        - name: now
+      env_vars:
+        - name: NODE_ENV
+          value: test
+        - name: CI
+          value: 'true'
+      jobs:
+      - name: Deploy to Zeit Now 
+        commands:
+          - checkout 
+          - nvm use 
+          - node --version 
+          - npm --version 
+          - npm install now -g 
+          - now --token $ZEIT_TOKEN --local-config now.json

@@ -78,23 +78,11 @@ blocks:
             - cache restore client-node-modules-$SEMAPHORE_GIT_BRANCH-$(checksum package-lock.json),client-node-modules-$SEMAPHORE_GIT_BRANCH,client-node-modules-master
             - npm test
 
-  - name: Deploy
-    task:
-      secrets:
-        - name: now
-      env_vars:
-        - name: NODE_ENV
-          value: test
-        - name: CI
-          value: 'true'
-      prologue:
-        commands:
-          - checkout
-          - nvm use
-          - node --version
-          - npm --version
-      jobs:
-        - name: Deploy to Zeit Now
-          commands:
-            - npm install now -g
-            - now --token $ZEIT_TOKEN --local-config now.json
+promotions:
+  # Automatically deploy to production on successful builds on master branch:
+  - name: Deploy to production
+    pipeline_file: deploy-production.yml
+    auto_promote_on:
+      - result: passed
+        branch:
+          - master
