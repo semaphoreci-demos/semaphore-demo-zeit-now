@@ -1,7 +1,7 @@
-# Semaphore demo CI/CD pipeline using JavaScript (Node.js, TypeScript, Nest.js, React)
+# Semaphore demo CI/CD pipeline with Zeit Now
 
-Example application and CI/CD pipeline showing how to run a JavaScript Express.js project
-on Semaphore 2.0. Project consists of a Express.js server. Code is written in JavaScript.
+Example how to build an Express.js Node.js project and deploy it to Zeit Now
+using Semaphore.
 
 ## CI/CD on Semaphore
 
