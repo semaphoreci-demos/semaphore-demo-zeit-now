@@ -23,13 +23,6 @@ agent:
 blocks:
   - name: Install dependencies
     task:
-      # Set environment variables that your project requires.
-      # See https://docs.semaphoreci.com/article/66-environment-variables-and-secrets
-      env_vars:
-        - name: NODE_ENV
-          value: test
-        - name: CI
-          value: 'true'
       jobs:
         - name: npm install and cache
           commands:
@@ -55,11 +48,6 @@ blocks:
 
   - name: Run tests
     task:
-      env_vars:
-        - name: NODE_ENV
-          value: test
-        - name: CI
-          value: 'true'
       jobs:
         - name: npm test
           commands:

@@ -10,11 +10,6 @@ blocks:
     task:
       secrets:
         - name: now
-      env_vars:
-        - name: NODE_ENV
-          value: test
-        - name: CI
-          value: 'true'
       jobs:
       - name: Deploy to Zeit Now 
         commands:
