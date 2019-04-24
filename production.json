@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "express",
+  "name": "semaphore-demo",
   "builds": [
       { "src": "**/*.js", "use": "@now/node" }
   ]
