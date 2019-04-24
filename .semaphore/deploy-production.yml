@@ -15,7 +15,5 @@ blocks:
         commands:
           - checkout 
           - nvm use 
-          - node --version 
-          - npm --version 
           - npm install now -g 
           - now --token $ZEIT_TOKEN --local-config production.json

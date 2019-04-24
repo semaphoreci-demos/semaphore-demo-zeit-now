@@ -53,8 +53,6 @@ blocks:
           commands:
             - checkout
             - nvm use
-            - node --version
-            - npm --version
             - cache restore client-node-modules-$SEMAPHORE_GIT_BRANCH-$(checksum package-lock.json),client-node-modules-$SEMAPHORE_GIT_BRANCH,client-node-modules-master
             - npm test
 
