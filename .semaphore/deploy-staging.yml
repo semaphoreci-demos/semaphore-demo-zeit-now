@@ -1,0 +1,19 @@
+# This pipeline runs after semaphore.yml
+version: v1.0
+name: Deploy to staging 
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+blocks:
+  - name: Deploy to staging
+    task:
+      secrets:
+        - name: now
+      jobs:
+      - name: Deploy to Zeit Now 
+        commands:
+          - checkout 
+          - nvm use 
+          - npm install now -g 
+          - now --token $ZEIT_TOKEN --local-config staging.json

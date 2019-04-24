@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "name": "semaphore-demo",
+  "builds": [
+      { "src": "**/*.js", "use": "@now/node" }
+  ]
+}
