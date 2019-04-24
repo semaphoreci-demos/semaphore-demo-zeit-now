@@ -79,6 +79,10 @@ blocks:
             - npm test
 
 promotions:
+  # Deployment to staging can be trigger manually:
+  - name: Deploy to staging
+    pipeline_file: deploy-staging.yml
+
   # Automatically deploy to production on successful builds on master branch:
   - name: Deploy to production
     pipeline_file: deploy-production.yml

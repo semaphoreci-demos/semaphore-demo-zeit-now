@@ -1,12 +1,12 @@
 # This pipeline runs after semaphore.yml
 version: v1.0
-name: Deploy to production
+name: Deploy to staging 
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
-  - name: Deploy to production 
+  - name: Deploy to staging
     task:
       secrets:
         - name: now
@@ -23,4 +23,4 @@ blocks:
           - node --version 
           - npm --version 
           - npm install now -g 
-          - now --token $ZEIT_TOKEN --local-config production.json
+          - now --token $ZEIT_TOKEN --local-config staging.json
