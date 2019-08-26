@@ -1,35 +1,37 @@
 {
-  "name": "express-ziet-now-semaphore-ci",
+  "name": "semaphore-demo-zeit-now",
   "version": "1.0.0",
-  "description": "Express Started Template",
-  "main": "index.js",
+  "description": "Semaphore demo to deploy to ZEIT Now",
+  "main": "api/hello.js",
   "scripts": {
-    "start": "NODE_ENV=local nodemon index.js",
+    "start": "now dev",
     "test": "NODE_ENV=test PORT=3000 jest --coverage --bail"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stajics/express-ziet-now-semaphore-ci.git"
+    "url": "git+https://github.com/semaphore-demo-zeit-now/semaphore-demo-zeit-now.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/stajics/express-ziet-now-semaphore-ci/issues"
+    "url": "https://github.com/semaphore-demo-zeit-now/semaphore-demo-zeit-now/issues"
   },
-  "homepage": "https://github.com/stajics/express-ziet-now-semaphore-ci#readme",
+  "homepage": "https://github.com/semaphore-demo-zeit-now/semaphore-demo-zeit-now#readme",
+  "engines": {
+    "node": "10.16.3"
+  },
   "dependencies": {
-    "express": "^4.16.4",
-    "helmet": "^3.16.0"
+    "now": "^16.1.2"
   },
   "devDependencies": {
+    "express": "^4.17.1",
     "jest": "^24.7.1",
-    "nodemon": "^1.18.10",
     "supertest": "^4.0.2"
   },
   "jest": {
     "testEnvironment": "node",
     "collectCoverageFrom": [
-      "controllers/index.controller.js"
+      "api/hello.js"
     ]
   }
 }
