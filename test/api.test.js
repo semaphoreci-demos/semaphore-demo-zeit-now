@@ -13,7 +13,7 @@ beforeAll((done) => {
 });
 
 describe('GET /api/hello', function(){
-  it('respond with json', function(done){
+  it('respond with "Hello World!"', function(done){
     request(app)
       .get('/api/hello')
       .expect(200)

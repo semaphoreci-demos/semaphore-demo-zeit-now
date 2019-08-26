@@ -4,7 +4,7 @@ version: v1.0
 # Name your pipeline. In case you connect multiple pipelines with promotions,
 # the name will help you differentiate between, for example, a CI build phase
 # and delivery phases.
-name: Build and test Express.js app
+name: Build and test
 
 # An agent defines the environment in which your code runs.
 # It is a combination of one of available machine types and operating
@@ -57,14 +57,14 @@ blocks:
             - npm test
 
 promotions:
-  # Deployment to staging can be trigger manually:
-  # - name: Deploy to staging
-  #   pipeline_file: deploy-staging.yml
+  Deployment to staging can be trigger manually:
+  - name: Deploy to staging
+    pipeline_file: deploy-staging.yml
 
   # Automatically deploy to production on successful builds on master branch:
   - name: Deploy to production
     pipeline_file: deploy-production.yml
     auto_promote_on:
       - result: passed
-        # branch:
-        #   - master
+        branch:
+          - master

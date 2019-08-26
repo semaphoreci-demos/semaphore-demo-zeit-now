@@ -16,4 +16,4 @@ blocks:
           - checkout 
           - nvm use 
           - npm install now -g 
-          - now --token $ZEIT_TOKEN # --local-config production.json
+          - now --token $ZEIT_TOKEN -n semaphore-demo-zeit-now

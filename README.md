@@ -1,12 +1,10 @@
 # Semaphore demo CI/CD pipeline with Zeit Now
 
-Example how to build an Express.js Node.js project and deploy it to Zeit Now
-using Semaphore.
+Example how to build an API serverless function and deploy it to Zeit Now using Semaphore.
 
 ## CI/CD on Semaphore
 
-1. Fork this repository and use it to [create a
-project](https://docs.semaphoreci.com/article/63-your-first-project).
+1. Fork this repository and use it to [create a project](https://docs.semaphoreci.com/article/63-your-first-project).
 
 2. Go to your Now dashboard, and [add a token](https://zeit.co/account/tokens). You should see a slightly hidden field in the middle of the page that says "Create a new token by entering its name..." I'd recommend calling it something obvious like `zeit-now-semaphoreci-yourproject`.
 
@@ -22,7 +20,7 @@ The example pipeline contains 3 blocks:
     -  installs and caches all npm dependencies
  - Run tests
     - Runs Tests using Jest framework (https://jestjs.io/)
- - Deply
+ - Deploy
     - Deploys the server using Zeist Now (https://zeit.co/now)
 
 ## Local project setup
@@ -36,6 +34,7 @@ $ npm install
 ### Running the app
 
 ```bash
+$ npm install -g now
 $ npm start
 ```
 
@@ -43,6 +42,14 @@ $ npm start
 
 ```bash
 $ npm test
+```
+
+### Deploy
+
+```bash
+$ npm install -g now
+$ now login
+$ now deploy
 ```
 
 ## License
